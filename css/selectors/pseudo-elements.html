@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /*
+       Se denominan pseudoelementos porque se refieren a partes de etiquetas HTML existentes,
+        como la primera línea de un párrafo, y no a nodos HTML completos en el 
+        árbol del documento
+
+     
+        Sin embargo, actúan como si hubieras añadido un elemento HTML 
+        totalmente nuevo en el marcado, en lugar de haber aplicado una 
+        clase nueva a los elementos presentes. Los pseudoelementos 
+        empiezan con un doble signo de dos puntos ::after , ::before
+
+        https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#pseudoelementos
+      */
+
+      .text:first-letter {
+        font-size: 40px;
+      }
+
+      p[active]::first-line {
+        font-size: 50px;
+        font-weight: bolder;
+      }
+
+      *::selection {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime sapiente
+      voluptate laborum! Obcaecati, eaque velit. Omnis laboriosam natus harum
+      itaque fugit corrupti animi sint dolor. A sunt esse illum doloremque!
+    </p>
+    <p active>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime sapiente
+      voluptate laborum! Obcaecati, eaque velit. Omnis laboriosam natus harum
+      itaque fugit corrupti animi sint dolor. A sunt esse illum doloremque!
+    </p>
+  </body>
+</html>

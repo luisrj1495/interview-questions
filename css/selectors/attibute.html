@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      a[href^="http"] {
+        font-weight: bolder;
+        font-size: 20px;
+      }
+      a[href="www.google.com"] {
+        color: red;
+      }
+
+      a[href$=".com"] {
+        border: 2px solid black;
+      }
+
+      div[aria-open*="ome"] {
+        font-size: 30px;
+      }
+
+      div[aria-open~="ome"] {
+        font-weight: bolder;
+        color: crimson;
+      }
+
+      div[open="true"][type*="rules"] {
+        font-size: 50px;
+      }
+
+      div[code] {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://msdn.com">MSDN</a>
+    <a href="www.google.com">Google</a>
+
+    <div aria-open="true ome donetor">Ome donetor</div>
+    <div aria-open="SomewhereHTMLIsHere">Ome donetor</div>
+    <div open="true" data-content="json" type="rules">
+      Style by two attributes
+    </div>
+
+    <div code>Style by attribute</div>
+
+    <div style="margin-bottom: 10px">Div 1</div>
+    <div style="margin-top: 10px">Div 2</div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* scroll-snap-align: start; */
+  scroll-snap-align: center;
+  min-width: 100vw;
+  height: 100vh;
+}
+
+main {
+  /* scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh; */
+}
+
+.snap-horizontal {
+  scroll-snap-type: x mandatory;
+  /* scroll-padding: 50%; */
+  /* max-height: 100vh; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  transition: all 1s;
+}
+
+.one {
+  background-color: violet;
+}
+
+.two {
+  background-color: blue;
+}
+
+.three {
+  background-color: chocolate;
+}
+
+.four {
+  background-color: darkcyan;
+}
